@@ -2,7 +2,6 @@ import socket
 import StringIO
 import sys
 
-
 class WSGIServer(object):
 
     address_family = socket.AF_INET
@@ -62,8 +61,6 @@ class WSGIServer(object):
         # The following code snippet does not follow PEP8 conventions
         # but it's formatted the way it is for demonstration purposes
         # to emphasize the required variables and their values
-        #
-        # Required WSGI variables
         env['wsgi.version']      = (1, 0)
         env['wsgi.url_scheme']   = 'http'
         env['wsgi.input']        = StringIO.StringIO(self.request_data)
